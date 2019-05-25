@@ -4,14 +4,14 @@ from django.db import models
 class CartItemManager(models.Manager):
 
     def add_item(self, cart_key, product):
-        if self.filter(cart_key=cart_key, product).exists():
+        if self.filter(cart_key=cart_key, product=product).exists():
             created = False
             cart_item = self.get(cart_key=cart_key, product=product)
             cart_item.quantity = cart_item.quantity + 1
             cart_item.save()
         else:
             created = True
-            cart_item = CartItem.objects.create(cart_key=cart_key, product=product, price=price)
+            cart_item = CartItem.objects.create(cart_key=cart_key, product=product, price=product.price)
             
         return cart_item, created
 

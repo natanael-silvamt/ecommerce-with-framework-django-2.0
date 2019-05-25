@@ -1,1 +1,1 @@
-/home/natanael/anaconda3/lib/python3.6/sre_constants.py
+/usr/lib/python3.6/sre_constants.py

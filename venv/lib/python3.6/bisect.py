@@ -1,1 +1,1 @@
-/home/natanael/anaconda3/lib/python3.6/bisect.py
+/usr/lib/python3.6/bisect.py

@@ -1,1 +1,1 @@
-/home/natanael/anaconda3/lib/python3.6/keyword.py
+/usr/lib/python3.6/keyword.py
