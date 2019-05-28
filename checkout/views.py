@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404
-from django.views.generic import RedirectView, TemplateView, ListView
+from django.views.generic import RedirectView, TemplateView, ListView, DetailView
 from django.contrib import messages
 from django.forms import modelformset_factory
 from django.urls import reverse
@@ -93,7 +93,16 @@ class OrderListView(LoginRequiredMixin, ListView):
         return Order.objects.filter(user=self.request.user)
 
 
+class OrderDetailView(LoginRequiredMixin, DetailView):
+
+    template_name = 'checkout/order_detail.html'
+
+    def get_queryset(self):
+        return Order.objects.filter(user=self.request.user)
+
+
 create_cartitem = CreateCartItemView.as_view()
 cart_item = CartItemView.as_view()
 checkout = CheckoutView.as_view()
 order_list = OrderListView.as_view()
+order_detail = OrderDetailView.as_view()
