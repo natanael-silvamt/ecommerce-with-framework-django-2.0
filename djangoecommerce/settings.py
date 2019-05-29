@@ -170,3 +170,7 @@ MESSAGE_TAGS = {
     messages_constants.WARNING: 'warning',
     messages_constants.ERROR: 'danger',
 }
+
+PAGSEGURO_TOKEN = ''
+PAGSEGURO_EMAIL = 'natanaelsilva.cc16@gmail.com'
+PAGSEGURO_SANDBOX = True
