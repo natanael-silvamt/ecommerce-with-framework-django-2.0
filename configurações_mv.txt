@@ -1,3 +1,6 @@
+0 - ssh ubuntu@ip -i caminha da chave
+
+0.1 - sudo apt update
 
 1 - sudo apt install nginx supervisor python3-dev
 
@@ -9,7 +12,7 @@
 
 4 - git clone https://github.com/natanael-silvamt/Ecommerce-Django-2.0.git
 
-5 - mv Ecommerce-Django-2 djangoecommerce
+5 - mv Ecommerce-Django-2.0 djangoecommerce
 
 6 - cd djangoecommerce
 
