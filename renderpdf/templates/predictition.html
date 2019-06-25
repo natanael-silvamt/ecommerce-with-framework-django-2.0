@@ -1,0 +1,27 @@
+{% extends "accounts/index.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %} Relatório Gráfico {% endblock %}
+
+{% block accounts_container %}
+    <div id="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for key, value in predict %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ value }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    <!-- {{ predict }} -->
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "accounts/index.html" %}
+
+{% load widget_tweaks %}
+{% load static %}
+
+{% block title %} Relatório Gráfico {% endblock %}
+
+{% block accounts_container %}
+    <div id="container"></div>
+    <script src="{% static 'assets/highcharts.src.js' %}"></script>
+    <script>
+        Highcharts.chart('container', {{ chart|safe }});
+    </script>
+{% endblock %}

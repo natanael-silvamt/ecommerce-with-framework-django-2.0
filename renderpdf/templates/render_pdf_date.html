@@ -1,0 +1,14 @@
+{% extends "accounts/index.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %} Relatório Por Data {% endblock %}
+
+{% block accounts_container %}
+    <h2>Pedidos Por Data</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+{% endblock %}
